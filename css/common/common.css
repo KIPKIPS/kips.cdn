@@ -1,0 +1,498 @@
+/* common */
+
+* {
+    user-select: none;
+}
+
+html {
+    color: #000;
+    background: #fff
+}
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+img {
+    border: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+
+q:after,
+q:before {
+    content: ''
+}
+
+body,
+html {
+    font-family: Poppins, 'Noto Sans JP', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "Yu Gothic UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: 500;
+    letter-spacing: calc(.3rem + .6vmin);
+    font-size: 16px;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-variant-ligatures: no-common-ligatures;
+    font-variant-ligatures: no-common-ligatures
+}
+
+a,
+body,
+html {
+    -webkit-tap-highlight-color: transparent
+}
+
+a:active,
+a:link,
+a:visited {
+    color: #000;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    opacity: .3;
+    text-decoration: none;
+    outline: 0
+}
+
+.noselect {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.noanti {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated
+}
+
+#menu {
+    padding: 4vmin 4.4vmin;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+#menu h1 {
+    font-weight: 500;
+    font-size: calc(1.8rem + 3.6vmin);
+    margin-bottom: 1vh;
+    letter-spacing: calc(.4rem + 1vmin)
+}
+
+#menu h2 {
+    font-weight: 500;
+    font-size: calc(.7rem + .9vmin);
+    margin-bottom: 6vh;
+    letter-spacing: .22rem
+}
+
+#menu p {
+    margin-bottom: 4vh;
+    font-size: calc(.5rem + 3.6vmin)
+}
+
+#menu p.spa {
+    margin-top: 6vh
+}
+
+#menu p.none {
+    text-decoration: line-through
+}
+
+.k #menu {
+    position: fixed;
+    background: #fafafa;
+    width: 100%;
+    height: 100%
+}
+
+#bt_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: calc(10px + 3vmin);
+    cursor: pointer;
+    z-index: 101
+}
+
+#bt_menu img {
+    width: calc(32px + 4vmin);
+    padding: 1px;
+    -webkit-animation: animMenu .9s ease-in-out infinite alternate;
+    animation: animMenu .9s ease-in-out infinite alternate
+}
+
+@-webkit-keyframes animMenu {
+    0% {
+        opacity: .2;
+        transform: scale(1)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2)
+    }
+}
+
+@keyframes animMenu {
+    0% {
+        opacity: .2;
+        transform: scale(1)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2)
+    }
+}
+
+
+/* contents */
+
+#contents {
+    word-break: break-all;
+    display: none;
+}
+
+.contents {
+    margin-bottom: 2vmin;
+}
+
+#contents p.title {
+    font-size: calc(1.6rem + 3vmin);
+    margin: calc(24px + 2vmin) 4.4vmin;
+}
+
+#contents div:last-child {
+    margin-bottom: 0;
+}
+
+#contents span {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+#contents span img {
+    vertical-align: bottom;
+    width: 100%;
+}
+
+#contents span {
+    background: #eee;
+}
+
+#contents a:nth-child(odd) span {
+    background: #e2e2e2;
+}
+
+#contents span p {
+    position: absolute;
+    top: 50%;
+    color: #aaa;
+    transform: translateY(-50%);
+    font-size: calc(0.8rem + 1.5vmin);
+    padding: 20px;
+    line-height: 1.8;
+}
+
+#contents span p.target {
+    bottom: 0;
+    top: auto;
+    right: 0;
+    left: auto;
+    color: #fff;
+    transform: none;
+    font-size: calc(0.4rem + 0.5vmin);
+    padding: 4px 5px;
+    letter-spacing: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    line-height: unset;
+    margin: 10px 10px;
+}
+
+#contents span p.loading {
+    -webkit-animation: animLoading 0.15s ease-out infinite;
+    animation: animLoading 0.15s ease-out infinite;
+}
+
+#contents span.blank p {
+    color: #777;
+}
+
+#contents span.blank p.target {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#contents a span.others {
+    background: #333;
+}
+
+#contents span.others p {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: #fff;
+    font-size: calc(1.5rem + 2vmin);
+    transform: translateY(-50%);
+}
+
+@media (max-width: 600px) and (max-height: 900px) {
+    #contents span {
+        height: calc(32px + 36vmin);
+    }
+    #contents span img {
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+    }
+}
+
+@media (min-width: 600px) {
+    #contents span {
+        width: calc(100%/2);
+    }
+}
+
+@media (min-width: 1000px) {
+    #contents span {
+        width: calc(100%/3);
+    }
+}
+
+@media (min-width: 1400px) {
+    #contents span {
+        width: calc(100%/4);
+    }
+}
+
+@media (min-width: 1800px) {
+    #contents span {
+        width: calc(100%/5);
+    }
+}
+
+@-webkit-keyframes animLoading {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes animLoading {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.contents a {
+    margin-right: -15px;
+}
+
+
+/* about */
+
+#content {
+    text-align: center;
+    height: 80%;
+    position: relative;
+}
+
+.title {
+    font: "Montserrat";
+    line-height: 20px;
+    letter-spacing: 5px;
+}
+
+.ab_span {
+    padding-bottom: 3px;
+    border-bottom: 1px dashed;
+}
+
+.ab_span:hover {
+    color: #FF66A3;
+}
+
+.pink_box,
+.box,
+.drop_box {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+.box_bottom {
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    height: calc(1.4rem + 2vmax);
+    bottom: calc(4rem + 5vmin)
+}
+
+.box_bottom .icon {
+    margin: 0 calc(0.2rem + 0.5vmin);
+    height: 100%;
+    display: inline-block;
+}
+
+.box_bottom .icon img {
+    height: 100%;
+}
+
+#bottom {
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+    bottom: calc(0.2rem + 2vmin);
+    text-align: center;
+}
+
+
+/* news */
+
+#switch {
+    margin: 4vmin 4.4vmin;
+}
+
+#news {
+    padding: 0;
+    margin: 4vmin 4.4vmin;
+    word-break: break-all;
+    margin-bottom: 0;
+    padding-bottom: 4vmin;
+    font-weight: 500;
+    letter-spacing: calc(.3rem + .6vmin);
+    font-size: 16px;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-variant-ligatures: no-common-ligatures;
+    font-variant-ligatures: no-common-ligatures;
+}
+
+.news {
+    margin-bottom: calc(10px + 3vmin);
+    line-height: 1.3;
+    word-break: break-all;
+}
+
+.news .date {
+    font-size: calc(0.7rem + 0.8vmin);
+    margin-bottom: calc(1px + 1vmin);
+    margin-left: calc(3px + 0.2vmin);
+    color: #666;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.news .text {
+    font-size: calc(1.0rem + 1.3vmin);
+    display: block;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: calc(.3rem + .2vmin);
+    font-family: Montserrat;
+}
+
+.ds {
+    cursor: pointer;
+}
+
+.ds:hover {
+    opacity: 0.3;
+}
+
+
+/* main */
+
+#m_kips {
+    overflow: hidden;
+}
+
+#main_view {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+#m_canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.main_menu {
+    height: 100%;
+    pointer-events: none;
+}
+
+.main_menu p a {
+    pointer-events: auto;
+}
+
+
+/* color picker */
+
+#cp_main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(77, 77, 77);
+    overflow: hidden;
+}
+
+#output {
+    font-size: 20pt;
+    user-select: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Montserrat;
+}
