@@ -1,0 +1,470 @@
+html {
+    overflow: hidden;
+}
+
+#start {
+    width: 100%;
+    height: 100%;
+}
+
+#bt_about {
+    font-family: "Sawarabi Gothic", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "Yu Gothic UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    border: calc(2px + .3vmin) solid black;
+    margin: calc(10px + 1vmin);
+    font-size: calc(0.9rem + 1vmin);
+    font-weight: 600;
+    height: calc(25px + 1.8vmin);
+    line-height: calc(25px + 1.8vmin);
+    text-align: center;
+    letter-spacing: 0rem;
+    top: 0;
+    right: 0;
+    width: calc(25px + 1.8vmin);
+}
+
+#btns {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: auto;
+    float: left;
+    position: absolute;
+    z-index: 5;
+}
+
+.btn {
+    font-family: Ubuntu, sans-serif;
+    border: calc(2px + .3vmin) solid #000;
+    margin: calc(10px + 1vmin);
+    font-size: calc(.8rem + .8vmin);
+    height: calc(25px + 1.8vmin);
+    line-height: calc(25px + 1.8vmin);
+    display: inline-block;
+    padding: 0 calc(10px + 1vmin);
+    cursor: pointer;
+    letter-spacing: .2rem;
+}
+
+#bt_share {
+    margin: 0;
+}
+
+#about,
+#draw {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    position: absolute;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#about_bg {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+#bt_close,
+#bt_draw_close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin: calc(10px + 1vmin);
+    width: calc(28px + 2.4vmin);
+    height: calc(28px + 2.4vmin);
+    /* transform: scale(1.2) */
+    /* z-index: 15; */
+}
+
+#bt_close img,
+#bt_draw_close img {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 90%;
+    font-family: Ubuntu, sans-serif;
+    cursor: pointer;
+    padding: 20vh 0;
+    margin: 0;
+    text-align: center;
+    /* display: none; */
+    font-family: Ubuntu, sans-serif;
+    font-size: calc(1.2rem + 3vmin);
+    font-weight: 400;
+    letter-spacing: .2rem;
+    line-height: 1.5;
+}
+
+#main h1 {
+    -webkit-text-size-adjust: 100%;
+}
+
+#main h1 span {
+    border: calc(3px + .6vmin) solid #000;
+    padding: calc(2px + 2vmin) calc(5px + 10vmin);
+    display: inline-block;
+}
+
+#tips {
+    margin-top: calc(10px + 1vmin);
+    font-size: calc(.9rem + 1vmin);
+    -webkit-animation: animFade .3s ease-in-out infinite alternate;
+    animation: animFade .3s ease-in-out infinite alternate;
+}
+
+#tips2{
+    margin-top: calc(15px + 1.5vmin);
+    font-size: calc(.8rem + 0.5vmin);
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: calc(0.5rem + 0.6vmin);
+}
+
+#audio_load {
+    position: fixed;
+    width: 100%;
+    height: calc(5px + 0.9vmin);
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 1);
+    animation: animFade .12s ease-in infinite;
+    -webkit-animation: animFade .12s ease-in infinite;
+}
+
+@-webkit-keyframes animFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes animFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#auth {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    font-size: calc(.5rem + .5vmin);
+    margin: calc(5px + 1vmin);
+    letter-spacing: .15rem;
+    display: block;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 0 2px;
+    color: black;
+    font-family: "Sawarabi Gothic", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "Yu Gothic UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#info {
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    position: absolute;
+    font-family: "Sawarabi Gothic", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "Yu Gothic UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#info #desc {
+    font-size: calc(.6rem + .6vmin);
+    margin-top: 0;
+    letter-spacing: .2rem;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-align: center;
+}
+
+#info hr {
+    border: none;
+    border-bottom: 1.2px solid #000;
+    margin: calc(12px + 2vmin) auto;
+    width: 85%;
+}
+
+#info h2 {
+    font-family: Ubuntu, sans-serif;
+    font-size: calc(.9rem + 1.3vmin);
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+}
+
+#info h3 {
+    font-size: calc(.6rem + .6vmin);
+    margin-top: calc(20px + 3vmin);
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+#info_auth {
+    margin-top: calc(8px + .9vmin);
+    font-size: calc(.7rem + .8vmin);
+    text-align: center;
+}
+
+#info a {
+    text-decoration: none;
+    padding-bottom: calc(1px + .3vmin);
+    border-bottom: calc(2px + .1vmin) solid #000;
+    color: #000;
+}
+
+#info #share {
+    margin-top: calc(8px + .9vmin);
+    font-size: calc(.7rem + .8vmin);
+    text-align: center;
+}
+
+#info #share #wc {
+    margin: 0 calc(2px + 0.2vmin);
+}
+
+#info #share #qq {
+    margin: 0 calc(2px + 0.2vmin);
+}
+
+#share img {
+    /* transform: scale(0.05); */
+    width: calc(24px + 2.4vmin);
+    height: calc(24px + 2.4vmin);
+    cursor: pointer;
+}
+
+#vs,
+#sc {
+    margin-top: calc(8px + .9vmin);
+    font-size: calc(.7rem + .8vmin);
+    text-align: center;
+    letter-spacing: .2rem;
+    line-height: 1.5;
+}
+
+#canvas_root {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: white;
+}
+
+#draw {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+}
+
+#guide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+#guide img {
+    height: 100%;
+    width: 100%;
+}
+
+#guide canvas {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#tools {
+    margin: calc(9px + 1vmin);
+    float: left;
+    position: absolute;
+    opacity: 1;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: auto;/*calc((50px + 2.4vmin) * 6)*/
+    height: calc(28px + 2.4vmin);
+}
+
+#tools .bt {
+    margin: 0 7px;
+    width: calc(28px + 2.4vmin);
+    height: calc(28px + 2.4vmin);
+    float: left;
+    cursor: pointer;
+}
+
+#tools .bt img {
+    width: 100%;
+    height: 100%;
+}
+
+#undo img {
+    transform: scaleX(-1);
+}
+
+#under {
+    z-index: 10;
+}
+
+#above {
+    z-index: 20;
+}
+
+#slider {
+    width: calc((48px + 2.2vmin) * 3);
+    height: calc(22px + 2.2vmin);
+    margin: calc(40px + 2.2vmin) 0;
+    position: absolute;
+    left: 0;
+    border-radius: calc(24px + 2.2vmin);
+    background-color: black;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#pointer {
+    float: left;
+    position: relative;
+    width: calc(12px + 2.2vmin);
+    height: calc(12px + 2.2vmin);
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    pointer-events: none;
+}
+
+#picker {
+    width: calc(12px + 2.2vmin);
+    height: calc(12px + 2.2vmin);
+    left: calc((48px + 2.2vmin) * 3.1);
+    margin: calc(40px + 2.2vmin) 0;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+    background-color: black;
+    border: 5px solid black;
+}
+
+#use {
+    position: fixed;
+    bottom: calc(10px + .8vmin);
+    left: calc(8px + .8vmin);
+    z-index: 11;
+    border-bottom: 2px solid #000;
+    padding-bottom: calc(2px + .2vmin);
+    font-size: calc(.7rem + .7vmin);
+    line-height: 1.5;
+    cursor: pointer;
+    letter-spacing: .2rem;
+    -webkit-text-size-adjust: 100%;
+    font-family: "Sawarabi Gothic", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "Yu Gothic UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#ok {
+    bottom: calc(8px + .8vmin);
+    right: calc(8px + .8vmin);
+    position: fixed;
+    z-index: 10;
+    text-align: left;
+    font-family: Ubuntu, sans-serif;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    -webkit-text-size-adjust: 100%;
+}
+
+#ok p {
+    opacity: .3;
+    cursor: default;
+    margin-left: calc(6px + .6vmin);
+    font-family: Ubuntu, sans-serif;
+    display: inline-block;
+    padding: 0 calc(10px + 1vmin);
+    cursor: pointer;
+    border: calc(2px + .3vmin) solid #000;
+    color: #000;
+    font-size: calc(.8rem + .8vmin);
+    height: calc(25px + 1.8vmin);
+    line-height: calc(25px + 1.8vmin);
+    margin: 0;
+}
+
+#companion {
+    position: absolute;
+    height: 100%;
+    display: none;
+    width: 100%;
+    background-color: rgba(235, 235, 235, .95);
+    z-index: 20;
+    opacity: 0;
+    pointer-events: all;
+}
+
+#companion div {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    font-family: "Sawarabi Gothic", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "Yu Gothic UI", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#companion div table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-color: grey;
+}
+
+#companion div table td {
+    padding: calc(4px + .6vmin);
+    text-align: left;
+    font-size: calc(.8rem + .8vmin);
+    padding-top: calc(16px + 2vmin);
+}
+
+#companion div table td img {
+    width: calc(20px + 2.4vh);
+}
+
+#companion div table td #use_undo {
+    transform: scaleX(-1);
+}
